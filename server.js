@@ -1,9 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
+const cors = require("cors");
 const app = express();
 
-
+app.use(cors({ origin: 'http://localhost:5000' }));
 app.use(bodyParser.json());
 app.use(
     bodyParser.urlencoded({
@@ -18,6 +19,28 @@ mongoose.connect('mongodb+srv://admin:Admin123@donortrack.fr6p2.mongodb.net/Dono
 , {})
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('MongoDB connection error:', err));
+
+
+    const donorsSchema = new mongoose.Schema({
+      donorName: String,
+      donorPhone: String,
+      donorEmail: String,
+      donorAge: Number,
+      donorBloodGroup: String,
+      isVerified: { type: Boolean },
+      locations: [
+        {
+          label: String,
+          latitude: Number,
+          longitude: Number
+        }
+      ]
+  });
+  const Donor = mongoose.model('donors', donorsSchema)
+
+
+
+
 
 
 
