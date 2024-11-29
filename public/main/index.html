@@ -3,14 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Responsive Mobile Navbar</title>
+    <style>
+        /* Reset body and html margins */
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styles for the navigation bar */
+        .navbar {
+            background-color: #424f55; /* Dark background */
+            color: white;
+            padding: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px; /* Fixed navbar height */
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navbar left section */
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Navbar logo */
+        .brandLogo img {
+            height: 100px;
+            width: auto;
+        }
+
+        /* Navbar company name */
+        .ima img {
+            height: 150px;
+            width: auto;
+            margin-right: 40px;
+        }
+
+        /* Navbar right section */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Login button */
+        .login-btn {
+            background-color: #ff4f51
+            1;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+
+        .login-btn:hover {
+            background-color: #ff4f51
+            ;
+        }
+
+        /* Notification icon */
+        .notification {
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .notification:hover {
+            color: #f39c12;
+        }
+
+        /* Content container */
+        .content-container {
+            background-color: #424f55; /* Background color */
+            margin: 0;
+            margin-top: 60px; /* Offset for fixed navbar */
+            color: white;
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+      
+            align-items: center; /* Center horizontally */
+            text-align: center; /* Center text alignment */
+            height: calc(100vh - 60px); /* Full height minus navbar */
+            padding: 20px; /* Inner padding for container */
+            box-sizing: border-box;
+            font-weight: 900;
+        }
+
+        /* Headline styling */
+        .content-container h1 {
+            font-size: 28px;
+            margin-bottom: 10px; /* Space below headline */
+        }
+
+        /* Paragraph styling */
+        .content-container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-size: 32px;
+            text-align: left; /* Space below paragraph */
+        }
+
+        /* Button container for vertical buttons */
+        .content-container .button-container {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 15px; /* Add spacing between buttons */
+            width: 100%; /* Stretch to container width */
+            max-width: 300px; /* Set a max width for buttons */
+        }
+
+        /* Button styling */
+        .content-container .button-container button {
+            background-color: #ff4f51
+            ; /* Button color */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%; /* Full width button */
+            text-transform: uppercase;
+        }
+
+        .content-container .button-container button:hover {
+            background-color: #27ae60;
+        }
+
+        /* Media query for iPhone 12 Pro */
+        @media (max-width: 390px) {
+            .navbar {
+                flex-wrap: wrap; /* Allow wrapping if needed */
+                height: auto;
+                padding: 8px 10px;
+            }
+
+            .brandLogo img {
+                height: 40px; /* Adjust for smaller screen */
+            }
+
+            .ima img {
+                height: 70px;
+            }
+
+            .content-container h1 {
+                font-size: 22px;
+            }
+
+            .content-container p {
+                font-size: 14px;
+                font-size: large;
+            }
+
+            .content-container .button-container button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation bar -->
     <div class="navbar">
-        <div class="brandLogo"><img src="/public/imgs/3-removebg-preview.png" alt="" srcset=""></div>
+        <div class="nav-left">
+            <!-- Logo -->
+            <div class="brandLogo">
+                <img src="/public/imgs/3-removebg-preview.png" alt="Brand Logo">
+            </div>
+            <!-- Company name -->
+            <div class="ima">
+                <img src="/public/imgs/4-removebg-preview.png" alt="Company Name">
+            </div>
+        </div>
+        <div class="nav-right">
+            <button class="login-btn">Login</button>
+            <div class="notification">&#128276;</div>
+        </div>
+    </div>
+
+    <!-- Content below the navbar -->
+    <div class="content-container">
+        <!-- <h1>Welcome to Life-Link</h1> -->
+        <p>Connecting Lives Through Blood Donation</p>
+        <!-- Button Container -->
+        <div class="button-container">
+            <button>Donate</button>
+            <button>Receive</button>
+        </div>
     </div>
 </body>
-<script src="/main/script.js"></script>
-
 </html>
