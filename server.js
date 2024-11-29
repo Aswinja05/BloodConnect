@@ -11,7 +11,7 @@ app.use(
         extended: false,
     })
 );
-
+app.use(express.static(__dirname + "/public"));
 
 
 //DATABASE
@@ -27,7 +27,8 @@ mongoose.connect('mongodb+srv://admin:Admin123@donortrack.fr6p2.mongodb.net/Dono
       donorEmail: String,
       donorAge: Number,
       donorBloodGroup: String,
-      isVerified: { type: Boolean },
+      isVerified: Boolean,
+      dtCoins: Number,
       locations: [
         {
           label: String,
@@ -43,11 +44,10 @@ mongoose.connect('mongodb+srv://admin:Admin123@donortrack.fr6p2.mongodb.net/Dono
 
 
 
-
-app.get('/',(req,res)=>{
-    res.send("Hello")
+//API ENDPOINTS
+  app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/main/index.html');
 })
-
 
 
 
