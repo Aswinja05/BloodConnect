@@ -1,0 +1,180 @@
+/* Color palette
+
+Green #424f55
+Red #ff4f51
+white #ffffff */
+
+
+body{
+    margin: 0 0;
+    padding: 0 0;
+}
+
+/* MAIN PAGE */
+.navbar{
+    background-color: #424f55;
+
+}
+
+
+
+
+
+/* REQUEST BLOOD PAGE */
+.brandLogo img{
+    width: 50px;
+}
+.brandName img{
+    width: 50px;
+}
+.reqBloodMainSection{
+    background-color: #424f55;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Authentication */
+.authSection{
+    background-color: #424f55;
+    height: 100vh;
+}
+.back_arrow {
+    padding: 15px 15px;
+}
+
+.brand_logo {
+    padding: 20px 13px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.brand_logo img {
+    width: 65%;
+}
+
+.brand_name {
+    margin-top: 100px;
+    width: fit-content;
+    margin: 175px auto 0;
+    color: white;
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: bold;
+    height: fit-content;
+}
+
+.login-form {
+    height: fit-content;
+    /* width: 100vw; */
+    padding: 40px 60px;
+}
+
+form {
+    width: 100%;
+    margin: auto;
+}
+
+.form_ip {
+    height: 10px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #747474;
+    margin: 15px 0;
+    padding: 7px 0;
+    outline: none;
+    background-color: transparent;
+    /* border: none; */
+    color: white;
+}
+
+.requestOtp {
+    height: fit-content;
+    /* width: 100%; */
+    border: 1px solid #747474;
+    padding: 3px 25px;
+    border-radius: 25px;
+    margin: 2px 0px 10px;
+    background-color: #ff4f51;
+    display: flex;
+    color: white;
+    font-weight: bolder;
+    /* align-items: end; */
+    position: absolute;
+    left: 45%;
+    /* top: 51%; */
+    font-size: 17px;
+}
+
+#newUserFields {
+    display: flex;
+    position: absolute;
+    /* bottom: 73%; */
+    align-items: center;
+    padding: 30px 0px;
+    bottom: 53%;
+    width: 70%;
+    border-radius: 14px;
+    flex-direction: column;
+    background-color: #cbcdd1;
+}
+
+#newUserFields input {
+    height: 10px;
+    width: 80%;
+    border: 0;
+    border-bottom: 1px solid #747474;
+    /* margin: 15px 0; */
+    padding: 7px 0;
+    outline: none;
+    background-color: transparent;
+}
+
+#newUserFields button {
+    border-radius: 10px;
+    background-color: #173054;
+    color: white;
+}
+
+.login {
+    height: fit-content;
+    width: 100%;
+    border: 1px solid #747474;
+    padding: 7px 25px;
+    border-radius: 25px;
+    margin: 12px 0px 10px;
+    background-color: #ff4f51;
+    color: white;
+    font-weight: bolder;
+}
+
+.login-form span {
+    color: #ff4f51;
+    font-family: sans-serif;
+    width: fit-content;
+    /* margin: auto; */
+    display: block;
+}
+
+.login-form span a {
+    color: cadetblue;
+}
